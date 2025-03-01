@@ -15,6 +15,7 @@
     "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
     "resolveJsonModule": true
   },
   "include": ["src/**/*"],

@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "load-docs": "cross-env NODE_ENV=development tsx src/scripts/load-documents.mts"
+    "load-docs": "cross-env NODE_ENV=development NODE_OPTIONS='--max-old-space-size=8192' tsx src/scripts/load-documents.mts",
+    "debug": "cross-env NODE_ENV=development tsx --inspect src/pages/api/chat.ts"
   },
   "dependencies": {
     "@astrojs/node": "^9.0.1",
@@ -30,7 +31,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.3",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+      "@langchain/core": "^0.3.24",
+    "@langchain/textsplitters": "^0.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.13.4",
